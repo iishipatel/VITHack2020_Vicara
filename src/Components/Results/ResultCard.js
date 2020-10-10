@@ -11,7 +11,7 @@ function ResultCard(props) {
         setColor(calcColor(props.userData[props.el]))
         setRisk(calcRisk(props.userData[props.el]))
         setCalcRemark(calcRemark(props.userData[props.el]))
-    })
+    },[props.userData, props.el] )
 
     const calcColor = (number) =>{
         if(number <= 30){
