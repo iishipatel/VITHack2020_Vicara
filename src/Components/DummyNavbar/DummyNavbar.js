@@ -6,7 +6,7 @@ function DummyNavbar() {
     return (
         <div  style={{ backgroundColor: '#11151B' }} >
             <Navbar className="container" style={{ position: 'sticky' }} >
-                <Navbar.Brand href="#home"  style={{ color:'#EFF3F8' }}>
+                <Navbar.Brand href="/"  style={{ color:'#EFF3F8' }}>
                     <img src={logo} alt="logo"></img>
                 </Navbar.Brand>
                 <Navbar.Toggle />
