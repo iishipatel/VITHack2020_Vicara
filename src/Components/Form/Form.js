@@ -12,7 +12,7 @@ function Form() {
                         description="Make sure that values provided are accurate and latest. These will highly influence final reports."
                         type="warning"
                         showIcon
-                        style={{ width: '70%' }}
+                        style={{ width: '70%', left: -15 }}
                     />
                 </div>
                 <div className="col-lg-5"><FormSection /> </div>

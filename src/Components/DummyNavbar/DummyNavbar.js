@@ -4,7 +4,7 @@ import {Navbar} from 'react-bootstrap'
 function DummyNavbar() {
     return (
         <div  style={{ backgroundColor: '#11151B' }} >
-            <Navbar className="container" >
+            <Navbar className="container" style={{ position: 'sticky' }} >
                 <Navbar.Brand href="#home"  style={{ color:'#EFF3F8' }}>Navbar with text</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
