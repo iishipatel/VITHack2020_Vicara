@@ -24,7 +24,8 @@ function FormData(props) {
   const onFinish = (values) => {
     console.log(values)
     const bmi = (values.weight * 10000) / values.height ** 2;
-    const map = (values.map1+values.map2)/2
+    const map = (parseInt(values.map1)+parseInt(values.map2))/2
+    console.log(values.age, gender, bmi,map, values.hr, values.temp)
 
     let genderval;
     if(values.gender===0 || values.gender==="0"){
@@ -32,7 +33,6 @@ function FormData(props) {
     }else{
       genderval="Male"
     }
-
 
     axios
       .post("https://healthinsafe.herokuapp.com/predict", {
