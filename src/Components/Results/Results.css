@@ -1,5 +1,5 @@
 .ant-progress-text {
-  color: rgb(18, 60, 99) !important;
+  color: #eff3f8 !important;
 }
 
 .dark {
@@ -26,4 +26,13 @@
 
 .light_text {
   color: black !important;
+}
+
+.switch_toggle {
+  float: right;
+  margin-top: 14px;
+}
+
+.ant-switch-checked {
+  background-color: rgb(14, 212, 112);
 }

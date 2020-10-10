@@ -82,7 +82,7 @@ function Results() {
     return (
         <div className={check ? 'dark':'light'} >
             <div className="container" style={{ margin: 0 }} >
-            <Switch defaultChecked onChange={onChange} />
+            <Switch defaultChecked onChange={onChange} className="switch_toggle"/>
 
                 <div className={check ? 'dark_text row':'light_text row'} style={{ fontSize: 36, margin: 0, marginBottom: '1rem' }} >
                     Hello <span style={{ color: '#0ED470', fontWeight: 600, paddingLeft: 5 }} >{userName}</span>, your report has been generated.
