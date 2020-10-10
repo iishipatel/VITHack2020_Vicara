@@ -33,6 +33,7 @@ body {
 
 .form-view {
   /* overflow: scroll; */
+  z-index: 10;
 }
 
 .loader_form {
@@ -70,4 +71,8 @@ body {
 
 .ant-radio:hover .ant-radio-inner {
   border-color: #0ed470;
+}
+
+.div-head {
+  overflow-y: hidden !important;
 }

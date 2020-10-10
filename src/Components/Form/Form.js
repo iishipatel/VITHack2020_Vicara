@@ -12,10 +12,10 @@ function Form() {
 
     return (
         // <Spin spinning={loader} tip="Please wait while we are generating your report" className="loader_form">
-        <div style={{ backgroundColor: '#11151B', color: '#EFF3F8', justifyContent:'center',alignItems: 'center', display: 'flex', paddingTop:'3.5rem'}}  >
+        <div className="div-head" style={{ backgroundColor: '#11151B', color: '#EFF3F8', justifyContent:'center',alignItems: 'center', display: 'flex', paddingTop:'3.5rem', overflowY: 'hidden'}}  >
 
             <div className="row container" style={{ margin: 0 }} >
-                <div className="col-lg-7">
+                <div className="col-lg-7 div-head" style={{ overflowY: 'hidden' }} >
                     <Alert
                         message="Warning"
                         description="Make sure that values provided are accurate and latest. These will highly influence final reports."
@@ -26,7 +26,7 @@ function Form() {
                     />
                 </div>
                 <img src={circlesimg} alt="circle" className="circleimg"></img>
-                <div className="col-lg-5 form-view">
+                <div className="col-lg-5 form-view" >
                     
                     <FormSection /> 
             </div>
