@@ -57,11 +57,12 @@ function FormData(props) {
           bplow:values.map1
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => setloader(false));
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
+    setloader(false)
   };
 
   const genderhandle = (e) => {
@@ -69,7 +70,7 @@ function FormData(props) {
   };
 let btn_text;
 if(loader){
-  btn_text="GENERATING YOUR REPORT"
+  btn_text="GENERATING YOUR REPORT..."
 }else{
   btn_text="GENERATE REPORT"
 }
@@ -148,6 +149,7 @@ if(loader){
               fontWeight: 600,
               fontSize: 14,
               border: "none",
+              marginTop:"28px"
             }}
           
           >
