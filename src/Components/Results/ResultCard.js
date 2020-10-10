@@ -62,7 +62,7 @@ function ResultCard(props) {
 
     // className={props.check ? 'dark_text row':'light_text row'}
     return (
-        <div className="row" style= {{boxShadow: '-4px -4px 15px 3px #080A0D, 4px 4px 15px 3px #1B222B', borderRadius: 10, display: 'flex', flexDirection:'column'}}>
+        <div className="row" style= {props.check ? {boxShadow: '-4px -4px 15px 3px #080A0D, 4px 4px 15px 3px #1B222B', borderRadius: 10, display: 'flex', flexDirection:'column'}:{boxShadow: '-4px -4px 15px 3px #B9C0CC, 4px 4px 15px 3px #E7F0FF', borderRadius: 10, display: 'flex', flexDirection:'column'}}>
             <div style={{ color: color, textAlign: 'center', paddingTop: 10, paddingBottom: 10, fontWeight: 600, letterSpacing: '0.065em', fontSize: 18 }} >
                 {props.diseases[props.el].toUpperCase()}
             </div>
@@ -70,8 +70,8 @@ function ResultCard(props) {
                 <div className={props.check ? 'dark_text col-lg-2':'light_text col-lg-2'} style={{ padding: 10, display: 'flex',justifyContent:'center', alignItems: 'center' }} >
                     <Progress  className={props.check ? 'dark_text ':'light_text'} type="circle" percent={props.userData[props.el].toFixed(2)} width={100} strokeColor={color} style={props.check ?{ color: 'white' }:{color:"black"}} />
                 </div>
-                <div className="row col-lg-10"  style={{ padding: 10 }} >
-                    <div className="col" style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }} >
+                <div  className={props.check ? 'dark_text row col-lg-10':'light_text row col-lg-10'}  style={{ padding: 10 }} >
+                    <div className={props.check ? 'dark_text col':'light_text col'} style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }} >
                         <div style={{ textAlign: 'center', fontWeight: 700, fontSize: 16 }}>
                             Risk
                         </div>

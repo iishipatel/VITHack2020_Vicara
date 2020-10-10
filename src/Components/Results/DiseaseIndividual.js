@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import {Spin} from "antd"
 
 function DiseaseIndividual(props) {
 
     const [disease, setDiseaseName] = useState('')
+    const [spintime,setspintime]=useState(true)
     const [data, setData] = useState({})
     const [symp, setSymp] = useState([])
     const diseases = {
@@ -33,11 +35,13 @@ function DiseaseIndividual(props) {
       .then((res) => {
         setData(res.data)
         setSymp(res.data.PossibleSymptoms.split(","))
+        setspintime(false)
       })
-      .catch((err) => console.log(err));
+      .catch((err) => setspintime(false) );
     }, [APIs,props.location.state.disease])
 
     return (
+        <Spin tip="Loading..." spinning={spintime}>
         <div style={{ backgroundColor: '#11151b', color: '#E7EBF0', paddingTop: '3.5rem' }}>
            <div className="container" style={{ marginBottom: '3rem' }}>
                 <div style={{ fontWeight: 700, fontSize: 24, paddingBottom: 10, borderBottom: '1px solid #E7EBF0'}} >{diseases[disease]}</div>
@@ -74,6 +78,7 @@ function DiseaseIndividual(props) {
             
             </div> 
         </div>
+        </Spin>
     )
 }
 

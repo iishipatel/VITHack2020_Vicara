@@ -52,9 +52,10 @@ body {
 }
 
 .ant-spin-nested-loading {
-  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0);
 }
 
 .ant-spin-nested-loading > div > .ant-spin {
-  top: 126px;
+  /* top: 126px; */
+  height: 100vh;
 }
