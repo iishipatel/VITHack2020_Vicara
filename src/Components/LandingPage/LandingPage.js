@@ -1,14 +1,34 @@
-import React from 'react'
+import React from "react";
+import "./landing.css";
 
-function LandingPage() {
-    return (
-        <div style={{ backgroundColor: '#11151B', color: '#EFF3F8', height: '100vh' }} >
-            <div className="row">
-                <div className="col-lg-7 bg-danger ">Hello11</div>
-                <div className="col-lg-5 bg-success">Helloo3</div>
-            </div>
-        </div>
-    )
+import doc from "../../assets/landing.png"
+
+import { Button } from "antd";
+import { Link } from "react-router-dom";
+
+function Landing() {
+  return (
+    <div className="landing_bg">
+      <h1 className="heading_landing">
+      Your medical report is just <span className="green_hulk">one-click</span> away.
+      </h1>
+
+      <p className="p_landing">
+        A centralized database of a medical history of users in case of an
+        emergency which is accessed by verified doctors. A one-stop application
+        to store, share, and view medical history. 
+      </p>
+
+      <img alt="doc" className="circle_doc" src={doc}></img>
+
+      <div className="Button_grp_landing">
+        
+        <Button block className="first_btn btn_landing">
+          <Link to="/form">GET STARTED</Link>
+        </Button>
+      </div>
+    </div>
+  );
 }
 
-export default LandingPage
+export default Landing;
