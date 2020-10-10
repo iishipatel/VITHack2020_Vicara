@@ -23,29 +23,13 @@ function Results(props) {
 
     useEffect(() => {
         if(!location.userData){
-            setUserData({artery: 15.434070303925887,
-                liver: 14.646823571901201,
-                malignancy: 21.930433229654497,
-                pulmonary: 16.695960421457904,
-                renal: 12.85126356650014,
-                resp: 35.66975279619696,
-                stroke: 19.650616788633783})
-
-            setValues({
-                Name: "hbh",
-                age: "8",
-                height: "8",
-                hr: "8",
-                map1: "8",
-                map2: "8",
-                temp: "8",
-                weight: "8",
-            })
-            setBMI(22.22222)
-            setGender('Male')
-            setName("test")
-            setbpl(9)
-            setbph(100)
+            setUserData(JSON.parse(localStorage.getItem('setUserData')));
+            setName(JSON.parse(localStorage.getItem('setName')));
+            setBMI(JSON.parse(localStorage.getItem('setBMI')));
+            setGender(JSON.parse(localStorage.getItem('setGender')))
+            setValues(JSON.parse(localStorage.getItem('setValues')))
+            setbph(JSON.parse(localStorage.getItem('setbph')))
+            setbpl(JSON.parse(localStorage.getItem('setbhl')))
         }else{
             setUserData(location.userData.detail);
             setName(location.usersName);
@@ -55,6 +39,13 @@ function Results(props) {
             setbph(location.bphigh)
             setbpl(location.bplow)
 
+            localStorage.setItem('setUserData', JSON.stringify(location.userData.detail))
+            localStorage.setItem('setName', JSON.stringify(location.usersName))
+            localStorage.setItem('setBMI', JSON.stringify(location.bmi))
+            localStorage.setItem('setGender', JSON.stringify(location.gender))
+            localStorage.setItem('setValues', JSON.stringify(location.values))
+            localStorage.setItem('setbph', JSON.stringify(location.bphigh))
+            localStorage.setItem('setbhl', JSON.stringify(location.bplow))
         }
         }, [location, props]);
 
