@@ -12,10 +12,10 @@ function DummyNavbar() {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text className="mr-4">
-                    <a href="/"  style={{ color:'#EFF3F8', fontWeight: 600, fontSize: 14, letterSpacing: '0.3em' }} >FAQ</a>
+                    <a href="https://github.com/ChiragDugar/VITHack2020_Vicara" target="_blank"  rel="noopener noreferrer" style={{ color:'#EFF3F8', fontWeight: 600, fontSize: 14, letterSpacing: '0.3em' }} >FAQ</a>
                     </Navbar.Text>
                     <Navbar.Text>
-                    <a href="/"  style={{ color:'#EFF3F8', fontWeight: 600, fontSize: 14, letterSpacing: '0.3em' }}>ABOUT</a>
+                    <a href="https://vicara.co/" target="_blank" rel="noopener noreferrer" style={{ color:'#EFF3F8', fontWeight: 600, fontSize: 14, letterSpacing: '0.3em' }}>ABOUT</a>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Navbar>

@@ -14,9 +14,9 @@ function Landing() {
       </h1>
 
       <p className="p_landing">
-        A centralized database of a medical history of users in case of an
-        emergency which is accessed by verified doctors. A one-stop application
-        to store, share, and view medical history. 
+      With our product users can check the probability of having rather life threatening disease by just checking their vitals at home.
+<br></br>
+Our AI curated model, carefully analyzes user fed data and gives a probable prediction of the severity of the ailment.
       </p>
 
       <img alt="doc" className="circle_doc" src={doc}></img>

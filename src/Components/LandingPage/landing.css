@@ -26,7 +26,7 @@ body {
   height: 92px;
   width: 662px;
   left: 84px;
-  top: 153px;
+  top: 144px;
   position: absolute;
   color: #e7e7e7;
   font-size: 48px;
@@ -35,7 +35,7 @@ body {
 }
 
 .p_landing {
-  margin-top: 26px;
+  margin-top: 24px;
   z-index: 20;
   color: aliceblue;
   height: 106px;
@@ -43,10 +43,11 @@ body {
   left: 84px;
   top: 261px;
   position: absolute;
+  font-size: 20px;
 }
 
 .Button_grp_landing {
-  top: 70%;
+  top: 77%;
   left: 84px;
   position: absolute;
   margin-right: 12px;
