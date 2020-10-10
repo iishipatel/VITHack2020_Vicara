@@ -68,7 +68,7 @@ function ResultCard(props) {
             </div>
             <div style={{ flexDirection: 'row', display: 'flex' }} >
                 <div className={props.check ? 'dark_text col-lg-2':'light_text col-lg-2'} style={{ padding: 10, display: 'flex',justifyContent:'center', alignItems: 'center' }} >
-                    <Progress className={props.check ? 'dark_text ':'light_text'} type="circle" percent={props.userData[props.el].toFixed(2)} width={100} strokeColor={color} style={props.check ?{ color: 'white' }:{color:"black"}} />
+                    <Progress  className={props.check ? 'dark_text ':'light_text'} type="circle" percent={props.userData[props.el].toFixed(2)} width={100} strokeColor={color} style={props.check ?{ color: 'white' }:{color:"black"}} />
                 </div>
                 <div className="row col-lg-10"  style={{ padding: 10 }} >
                     <div className="col" style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }} >
