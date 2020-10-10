@@ -16,7 +16,7 @@ const tailLayout = {
 
 function FormData(props) {
 
-  const [gender, setGender] = useState(0);
+  const [gender, setGender] = useState(1);
   const [loader,setloader] = useState(false)
 
   let history = useHistory();

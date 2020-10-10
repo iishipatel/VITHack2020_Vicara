@@ -59,3 +59,15 @@ body {
   /* top: 126px; */
   height: 100vh;
 }
+
+.ant-radio-checked .ant-radio-inner {
+  border-color: #0ed470 !important ;
+}
+
+.ant-radio-checked .ant-radio-inner:after {
+  background-color: #0ed470;
+}
+
+.ant-radio:hover .ant-radio-inner {
+  border-color: #0ed470;
+}
