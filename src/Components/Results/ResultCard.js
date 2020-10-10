@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Progress} from 'antd'
+import "./Results.css"
 
 function ResultCard(props) {
 
@@ -50,23 +51,24 @@ function ResultCard(props) {
     }
 
     const symptoms = {
-        "artery": "Cough | Nasal Congestion | Fever | Head Cold Symptoms",
-        "liver": "General abdominal pain, cramps, or spasms | Changes in abdominal size | Accumulation of fluid under the skin | Liver, Gallbladder, or Biliary Tract Symptoms | Back pain, Ache, Soreness, or Discomfort ",
-        "malignancy": "Fatigue | Lump or area of thickening that can be felt under the skin | Weight changes | Skin changes | Changes in bowel or bladder habits | Persistent cough or trouble breathing",
+        "artery": "High Blood Pressure | endocrine diseases | metabolic and immunity diseases",
+        "liver": "General abdominal pain, cramps, or spasms | Changes in abdominal size ",
+        "malignancy": "Fatigue | Weight changes | Skin changes Persistent cough or trouble breathing",
         "pulmonary":"Cough | Nasal Congestion | Fever | Head Cold Symptoms",
-        "renal": "Diabetic Nephropathy | High Blood Pressure | Glomerulonephritis | Polycystic Kidney Disease",
-        "resp": "Cough | Shortness of breath | Chest pain | Hemoptysis (blood in the sputum)",
+        "renal": "Diabetic Nephropathy | High Blood Pressure | Polycystic Kidney Disease",
+        "resp": "Cough | Shortness of breath | Chest pain | Hemoptysis ",
         "stroke": "High External Temperatures | Physical Exertion"
     }
 
+    // className={props.check ? 'dark_text row':'light_text row'}
     return (
-        <div className="row" style= {{boxShadow: '-4px -4px 15px 3px #080A0D, 4px 4px 15px 3px #1B222B', borderRadius: 10, display: 'flex', flexDirection:'column'}}>
+        <div className="row" style={props.check ? {boxShadow: '-4px -4px 15px 3px #080A0D, 4px 4px 15px 3px #1B222B', borderRadius: 10, display: 'flex', flexDirection:'column'} : {boxShadow: '-4px -4px 15px 3px #E7F0FF, 4px 4px 15px 3px #B9C0CC', borderRadius: 10, display: 'flex', flexDirection:'column',color:"black"}}>
             <div style={{ color: color, textAlign: 'center', paddingTop: 10, paddingBottom: 10, fontWeight: 600, letterSpacing: '0.065em' }} >
                 {props.diseases[props.el].toUpperCase()}
             </div>
             <div style={{ flexDirection: 'row', display: 'flex' }} >
-                <div className="col-lg-2" style={{ padding: 10, display: 'flex',justifyContent:'center', alignItems: 'center' }} >
-                    <Progress type="circle" percent={props.userData[props.el].toFixed(2)} width={100} strokeColor={color} style={{ color: 'white' }} />
+                <div className={props.check ? 'dark_text col-lg-2':'light_text col-lg-2'} style={{ padding: 10, display: 'flex',justifyContent:'center', alignItems: 'center' }} >
+                    <Progress className={props.check ? 'dark_text ':'light_text'} type="circle" percent={props.userData[props.el].toFixed(2)} width={100} strokeColor={color} style={props.check ?{ color: 'white' }:{color:"black"}} />
                 </div>
                 <div className="row col-lg-10"  style={{ padding: 10 }} >
                     <div className="col" style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column' }} >

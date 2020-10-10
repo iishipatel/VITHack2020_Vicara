@@ -1,10 +1,19 @@
-import React from 'react'
+// import React from 'react'
 import FormSection from './FormSection'
-import {Alert} from 'antd'
+import circlesimg from "../../assets/circles.png"
+import { Alert } from 'antd';
+import React from 'react'
+
+
+
 
 function Form() {
+
+
     return (
-        <div style={{ backgroundColor: '#11151B', color: '#EFF3F8', justifyContent:'center',alignItems: 'center', display: 'flex', paddingTop:'3.5rem' }}  >
+        // <Spin spinning={loader} tip="Please wait while we are generating your report" className="loader_form">
+        <div style={{ backgroundColor: '#11151B', color: '#EFF3F8', justifyContent:'center',alignItems: 'center', display: 'flex', paddingTop:'3.5rem'}}  >
+
             <div className="row container" style={{ margin: 0 }} >
                 <div className="col-lg-7">
                     <Alert
@@ -12,12 +21,20 @@ function Form() {
                         description="Make sure that values provided are accurate and latest. These will highly influence final reports."
                         type="warning"
                         showIcon
+                        className="alert_form"
                         style={{ width: '70%', left: -15 }}
                     />
                 </div>
-                <div className="col-lg-5"><FormSection /> </div>
+                <img src={circlesimg} alt="circle" className="circleimg"></img>
+                <div className="col-lg-5 form-view">
+                    
+                    <FormSection /> 
             </div>
+            </div>
+
         </div>
+        // </Spin>
+
     )
 }
 

@@ -1,3 +1,29 @@
 .ant-progress-text {
-  color: #eff3f8 !important;
+  color: rgb(18, 60, 99) !important;
+}
+
+.dark {
+  background-color: #11151b;
+  color: #eff3f8;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 3.5rem;
+}
+
+.light {
+  background-color: #dfe8f6;
+  color: #eff3f8;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 3.5rem;
+}
+
+.dark_text {
+  color: white !important;
+}
+
+.light_text {
+  color: black !important;
 }
