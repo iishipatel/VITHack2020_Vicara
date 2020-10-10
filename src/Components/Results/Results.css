@@ -21,11 +21,13 @@
 }
 
 .dark_text {
-  color: white !important;
+  color: #e7ebf0 !important;
+  cursor: pointer;
 }
 
 .light_text {
   color: black !important;
+  cursor: pointer;
 }
 
 .switch_toggle {

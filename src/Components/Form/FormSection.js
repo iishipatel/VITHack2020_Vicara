@@ -107,7 +107,7 @@ if(loader){
 
         <div style={{ color: "#EFF3F8", fontSize: 16 }}>Height (cm):</div>
         <Form.Item name="height" rules={[{ required: true, message: 'Please input your height!' }]}>
-          <Input placeholder="169" />
+          <Input placeholder="170" />
         </Form.Item>
 
         <div style={{ color: "#EFF3F8", fontSize: 16 }}>Weight (kg):</div>
