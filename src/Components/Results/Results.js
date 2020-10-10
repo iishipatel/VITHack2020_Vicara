@@ -22,7 +22,6 @@ function Results(props) {
     const location = useLocation();
 
     useEffect(() => {
-        console.log(props)
         if(!location.userData){
             setUserData({artery: 15.434070303925887,
                 liver: 14.646823571901201,
