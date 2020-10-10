@@ -62,8 +62,8 @@ function ResultCard(props) {
 
     // className={props.check ? 'dark_text row':'light_text row'}
     return (
-        <div className="row" style={props.check ? {boxShadow: '-4px -4px 15px 3px #080A0D, 4px 4px 15px 3px #1B222B', borderRadius: 10, display: 'flex', flexDirection:'column'} : {boxShadow: '-4px -4px 15px 3px #E7F0FF, 4px 4px 15px 3px #B9C0CC', borderRadius: 10, display: 'flex', flexDirection:'column',color:"black"}}>
-            <div style={{ color: color, textAlign: 'center', paddingTop: 10, paddingBottom: 10, fontWeight: 600, letterSpacing: '0.065em' }} >
+        <div className="row" style= {{boxShadow: '-4px -4px 15px 3px #080A0D, 4px 4px 15px 3px #1B222B', borderRadius: 10, display: 'flex', flexDirection:'column'}}>
+            <div style={{ color: color, textAlign: 'center', paddingTop: 10, paddingBottom: 10, fontWeight: 600, letterSpacing: '0.065em', fontSize: 18 }} >
                 {props.diseases[props.el].toUpperCase()}
             </div>
             <div style={{ flexDirection: 'row', display: 'flex' }} >

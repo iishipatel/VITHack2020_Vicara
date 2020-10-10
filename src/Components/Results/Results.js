@@ -7,7 +7,7 @@ import './Results.css'
 import { Switch } from 'antd';
 
 
-function Results() {
+function Results(props) {
 
     const [userData, setUserData] = useState(null);
     const [userName, setName] = useState("");
@@ -22,7 +22,7 @@ function Results() {
     const location = useLocation();
 
     useEffect(() => {
-
+        console.log(props)
         if(!location.userData){
             setUserData({artery: 15.434070303925887,
                 liver: 14.646823571901201,
@@ -57,7 +57,7 @@ function Results() {
             setbpl(location.bplow)
 
         }
-        }, [location]);
+        }, [location, props]);
 
     if(!userData){
         return <h1>Loading</h1>
@@ -109,7 +109,7 @@ function Results() {
                         return(
                             <div>
                                 <ResultCard check={check} el={el} userData={userData} diseases={diseases}/>
-                                <div className={check ? 'dark_text':'light_text '} style={{ textAlign: 'right', paddingTop: 10, paddingBottom: '2rem', fontSize: 11.69, display: 'flex',justifyContent: 'flex-end', alignItems:'center' }} >
+                                <div className={check ? 'dark_text':'light_text '} onClick={()=> props.history.push("/detailed-results", {disease: el})} style={{ textAlign: 'right', paddingTop: 10, paddingBottom: '2rem', fontSize: 11.69, display: 'flex',justifyContent: 'flex-end', alignItems:'center' }} >
                                     <LinkOutlined style={check ?{ color: '#EFF3F8', paddingRight: 5 }:{ color: '#000', paddingRight: 5 }} />
                                     Know more about {diseases[el]}
                                 </div>
