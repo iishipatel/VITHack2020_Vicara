@@ -22,10 +22,8 @@ function FormData(props) {
   let history = useHistory();
 
   const onFinish = (values) => {
-    console.log(values)
     const bmi = (values.weight * 10000) / values.height ** 2;
     const map = (parseInt(values.map1)+parseInt(values.map2))/2
-    console.log(values.age, gender, bmi,map, values.hr, values.temp)
 
     let genderval;
     if(values.gender===0 || values.gender==="0"){
@@ -44,7 +42,6 @@ function FormData(props) {
         temp: values.temp,
       })
       .then((res) => {
-        console.log(res);
         setloader(false);
         history.push({
           pathname: "/results",
@@ -84,17 +81,17 @@ if(loader){
         onFinishFailed={onFinishFailed}
         className="formdatalist"
       >
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Full Name:</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Full Name</div>
         <Form.Item name="Name" rules={[{ required: true, message: 'Please enter your Name!' }]}>
           <Input placeholder="Sambhav Jain" />
         </Form.Item>
 
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Age:</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Age</div>
         <Form.Item name="age" rules={[{ required: true, message: 'Please enter your age!' }]}>
           <Input placeholder="20" />
         </Form.Item>
 
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Gender:</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Gender</div>
 
         <Radio.Group
           onChange={genderhandle}
@@ -105,33 +102,33 @@ if(loader){
           <Radio value={0}>Female</Radio>
         </Radio.Group>
 
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Height (cm):</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Height (cm)</div>
         <Form.Item name="height" rules={[{ required: true, message: 'Please input your height!' }]}>
           <Input placeholder="170" />
         </Form.Item>
 
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Weight (kg):</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Weight (kg)</div>
 
         <Form.Item name="weight" rules={[{ required: true, message: 'Please input your weight!' }]}>
           <Input placeholder="70" />
         </Form.Item>
 
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Heart Rate:</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Heart Rate</div>
         <Form.Item name="hr" rules={[{ required: true, message: 'Please input your heart rate' }]}>
           <Input placeholder="112" />
         </Form.Item>
 
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Temprature (°F):</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Temprature (°F)</div>
         <Form.Item name="temp" rules={[{ required: true, message: 'Please input your body temprature!' }]}>
           <Input placeholder="102" />
         </Form.Item>
 
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Blood Pressure(low):</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Blood Pressure (low)</div>
         <Form.Item name="map1" rules={[{ required: true, message: 'Please input your blood pressure(high)!' }]}>
           <Input placeholder="80" />
         </Form.Item>
 
-        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Blood Pressure(high):</div>
+        <div style={{ color: "#EFF3F8", fontSize: 16 }}>Blood Pressure (high)</div>
         <Form.Item name="map2" rules={[{ required: true, message: 'Please input your blood pressure(low)!' }]}>
           <Input placeholder="120" />
         </Form.Item>

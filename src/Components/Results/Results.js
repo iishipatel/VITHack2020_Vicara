@@ -55,7 +55,6 @@ function Results(props) {
 
     function onChange(checked) {
         setCheck(checked);
-        console.log(checked)
       }
       
 

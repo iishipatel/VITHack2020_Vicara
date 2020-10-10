@@ -24,7 +24,7 @@ Our AI curated model, carefully analyzes user fed data and gives a probable pred
       <div className="Button_grp_landing">
         
         <Button block className="first_btn btn_landing">
-          <Link to="/form">GET STARTED</Link>
+          <Link to="/form" style={{ fontWeight: 600 }} >GET STARTED</Link>
         </Button>
       </div>
     </div>
